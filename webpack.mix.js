@@ -13,3 +13,25 @@ const { mix } = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
+
+// semantic-ui
+mix.copy('node_modules/semantic-ui/dist/semantic.css', 'public/vendor/semantic-ui/dist/semantic.css')
+   .copy('node_modules/semantic-ui/dist/semantic.js', 'public/vendor/semantic-ui/dist/semantic.js')
+   .copyDirectory('node_modules/semantic-ui/dist/themes/', 'public/vendor/semantic-ui/dist/themes/');
+
+// jquery
+mix.copy('node_modules/jquery/dist/jquery.js', 'public/vendor/jquery/dist/jquery.js');
+
+mix.sass('resources/assets/sass/test.scss', 'public/css')
+   .sass('resources/assets/sass/styles.scss', 'public/css')
+   .js('resources/assets/js/myPlugin.js', 'public/js');
+
+// jquery
+mix.copy('node_modules/jquery-mousewheel/jquery.mousewheel.js', 'public/vendor/jquery-mousewheel/jquery.mousewheel.js');
+
+mix.browserSync({
+    open: 'external',
+    host: 'silent.shop',
+    proxy: 'silent.shop',
+    files: ['resources/views/**/*.php', 'resources/assets/**/*.js', 'resources/assets/**/*.scss', 'app/**/*.php', 'routes/**/*.php']
+});

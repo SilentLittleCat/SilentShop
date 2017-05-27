@@ -1,0 +1,360 @@
+// Variables
+@import "styles_variables";
+
+#app {
+	background-color: $bg-color !important;
+}
+
+#app-header {
+	background-color: $header-bg-color;
+	margin: 0;
+	padding: 0;
+
+	> .text.menu {
+		width: $content-width;
+		min-width: $min-content-width;
+		margin: 0 auto;
+		padding: 0;
+
+		& .item,
+		& .menu > .item {
+			height: 40px;
+			border: 0px;
+		}
+
+		.dropdown.item {
+			border: 1px solid $header-bg-color;
+
+			&:hover {
+				background-color: $header-hover-bg-color;
+			}
+
+			.menu {
+		        border: 1px solid $header-border-color;
+		        border-top-width: 0px;
+		        border-radius: 0;
+		        z-index: 1100;
+		        margin: 0;
+		        padding: 20px;
+			}
+		}
+
+		> .simple.dropdown.item .menu {
+			width: 320px;
+			margin-left: -1px;
+		}
+
+		.mobile.dropdown.item .menu {
+			width: 180px;
+			margin-right: -1px;
+		}
+
+		.navigation.dropdown.item .menu {
+			width: 1200px;
+		}
+	}
+
+	> .fixed.menu {
+		.ui.search {
+			width: 800px;
+		}
+	}
+}
+
+#main-content {
+	width: $content-width;
+	min-width: $min-content-width;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#shop-header {
+	> .ui.search {
+		width: 600px;
+		margin: 40px auto;
+	}
+
+	> .header {
+		width: 100%;
+		height: 440px;
+
+		> .sub-nav {
+			float: left;
+			height: 400px;
+
+			> .left-nav,
+			> .right-nav {
+				float: left;
+				width: 200px;
+				display: inline-block;
+			}
+
+			> .left-nav .menu {
+				width: 100%;
+
+				> .item {
+					height: 40px;
+
+					&:hover {
+						background-color: $header-bg-color;
+					}
+				}
+			}
+
+			> .center-nav {
+				width: 800px;
+				height: 400px;
+				display: inline-block;
+				float: left;
+				position: relative;
+
+				> .left-nav-content {
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: #EEE;
+					width: 1000px;
+					height: 100%;
+					padding: 10px 30px;
+					border: 1px solid rgba(34, 36, 38, 0.15);
+					z-index: 100;
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.carousel {
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+	> .indicators {
+		position: absolute;
+	    z-index: 100;
+	    bottom: 20px;
+	    width: 250px;
+	    margin: 0 calc((100% - 250px) / 2);
+
+	    > .indicator {
+		    width: 60px;
+		    height: 8px;
+		    border-radius: 5px;
+		    background-color: white;
+		    display: inline-block;
+		    margin: 0 auto;
+		    position: relative;
+		    overflow: hidden;
+		    cursor: pointer;
+
+		    > span {
+			    height: 8px;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    background-color: red;
+		    }
+	    }
+	}
+
+	> .content .image {
+		width: 790px;
+		height: 400px;
+		margin-left: 5px;
+		display: none;
+		position: absolute;
+	    left: 0;
+	    top: 0;
+	}
+}
+
+#shop-content {
+	padding: 40px 0;
+
+	> .ui.grid {
+		width: 100%;
+		margin-left: 0;
+
+		> .row {
+			background-color: $content-color;
+
+			&:nth-child(even) {
+				margin-bottom: 20px;
+			}
+		}
+
+		> .row:first-child {
+			.header {
+				margin: 0;
+			}
+
+			.segment {
+				margin: 0;
+				padding: 5px;
+			}
+
+			.statistics {
+				margin: 0 5px;
+
+				.statistic {
+					margin: 0 5px;
+					font-weight: bold;
+				}
+
+				.value {
+					font-weight: bold;
+				}
+			}
+
+			.right.header:last-child {
+				height: 100%;
+				padding-top: 15px;
+			}
+		}
+
+		> .row:nth-child(3) {
+			.card .content:first-child {
+				padding: 0;
+
+				.segment {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+#goods-show {
+	width: 1200px;
+	margin: 60px auto;
+
+	> .ui.grid {
+		> .column {
+			width: 100%;
+			height: 600px;
+		}
+
+		.column {
+			margin: auto auto;
+		}
+
+		.row {
+			padding: 5px 0 5px 20px;
+		}
+
+		> .four {
+			background-color: $content-color;
+			position: relative;
+
+			.grid .row {
+				padding: 0;
+			}
+			.grid .row .column {
+				padding: 5px;
+			}
+			.grid .one.column .image {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+
+			.five.column {
+				> .column:first-child,
+				> .column:last-child {
+					margin: 0;
+
+					i {
+						margin: 0 auto;
+						padding: 0;
+						font-size: 5em;
+						color: red;
+						width: 100%;
+					}
+				}
+
+				.active.column {
+					border: 2px solid red;
+				}
+			}
+		}
+
+		> .ten {
+			.good-ticket {
+				background-color: $content-color;
+				padding: 10px;
+			}
+
+			.good-info {
+				margin-top: 20px;
+			}
+		}
+
+		> .two {
+			background-color: blue;
+		}
+	}
+}
+
+.image-zoom {
+	position: relative;
+	margin: 0;
+	padding: 0;
+
+	.image {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.image-box {
+		position: absolute;
+		top: 40%;
+		left: 40%;
+		z-index: 500;
+		background-color: red;
+		width: 20%;
+		height: 20%;
+		margin: auto;
+		padding: auto;
+		opacity: 0;
+		cursor: pointer;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	.cursor-box {
+		position: absolute;
+		border: 4px solid grey;
+		width: 100px;
+		height: 100px;
+		z-index: 200;
+		opacity: 0;
+		overflow: hidden;
+		box-sizing: content-box;
+
+		img {
+			position: absolute;
+		}
+	}
+}
+
+.darker {
+	filter: brightness(0.30);
+	-webkit-filter: brightness(0.30);
+}
+
+.lighter {
+	filter: brightness(1.30);
+	-webkit-filter: brightness(1.30);
+}
