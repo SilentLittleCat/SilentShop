@@ -1,4 +1,4 @@
-<p align="center"><img src="http://img0.ph.126.net/Zfjsmg1k7t_RguRcsKF_qw==/6631993554492953472.png"></p>
+<p align="center"><img src="http://img2.ph.126.net/CC4vDpWZCqCuGZbwcatihg==/6632089212004586807.png"></p>
 
 ## About SilentShop
 
