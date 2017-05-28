@@ -235,63 +235,95 @@
 			height: 600px;
 		}
 
-		.column {
-			margin: auto auto;
-		}
-
 		.row {
 			padding: 5px 0 5px 20px;
 		}
 
-		> .four {
-			background-color: $content-color;
-			position: relative;
+		.row:first-child {
+			> .four {
+				background-color: $content-color;
+				position: relative;	
 
-			.grid .row {
-				padding: 0;
-			}
-			.grid .row .column {
-				padding: 5px;
-			}
-			.grid .one.column .image {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-			}
-
-			.five.column {
-				> .column:first-child,
-				> .column:last-child {
+				.grid .row {
+					padding: 0;
+				}
+				.grid .row .column {
+					padding: 5px;
+				}
+				.grid .one.column .image {
 					margin: 0;
+					padding: 0;
+					width: 100%;
+				}	
 
-					i {
-						margin: 0 auto;
-						padding: 0;
-						font-size: 5em;
-						color: red;
-						width: 100%;
+				.five.column {
+					margin: 0;
+					padding: 15px;
+					background-color: $content-color;
+
+					> .column:first-child,
+					> .column:last-child {
+						margin: 0;	
+
+						i {
+							margin: 0 auto;
+							padding: 0;
+							font-size: 5em;
+							color: red;
+							width: 100%;
+						}
+					}	
+
+					.active.column {
+						border: 2px solid red;
 					}
 				}
+			}	
 
-				.active.column {
-					border: 2px solid red;
+			> .ten {
+				.good-ticket {
+					background-color: $content-color;
+					padding: 10px;
+					text-align: left;
+				}	
+
+				.good-info {
+					margin-top: 20px;
+				}
+			}	
+
+			> .two {
+				margin: 0;
+
+				.ad {
+					width: 100%;
 				}
 			}
 		}
 
-		> .ten {
-			.good-ticket {
-				background-color: $content-color;
-				padding: 10px;
+		> .row:nth-child(2) {
+			margin-top: 20px;
+			> .column {
+				padding: 0;
 			}
 
-			.good-info {
-				margin-top: 20px;
+			> .four {
+				margin: 0;
 			}
-		}
 
-		> .two {
-			background-color: blue;
+			> .twelve {
+				margin: 0;
+				padding: 0 20px;
+
+				> .menu {
+					margin: 0;
+					z-index: 500;
+				}
+
+				.active.segment {
+					height: 1800px;
+				}
+			}
 		}
 	}
 }
@@ -357,4 +389,50 @@
 .lighter {
 	filter: brightness(1.30);
 	-webkit-filter: brightness(1.30);
+}
+
+.sg-card {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+
+	> .header {
+		background-color: #888;
+		padding: 8px 5px;
+	}
+
+	> .content {
+		width: 100%;
+		height: 80px;
+		.left-content,
+		.right-content {
+			display: inline-block;
+			float: left;
+		}
+
+		.left-content {
+			width: 15%;
+			height: 20%;
+			margin: 11% 8%;
+		}
+
+		.right-content {
+			width: 64%;
+		}
+	}
+
+	> .actions {
+		width: 100%;
+		padding: 4%;
+
+		> .action {
+			width: 48%;
+			display: inline-block;
+
+			> .button {
+				width: 100%;
+			}
+		}
+	}
 }
